@@ -9,6 +9,12 @@ interface SectionBackgroundProps {
     className?: string;
     opacity?: number;
     overlayColor?: string; // e.g., 'bg-neutral-950/80'
+    /**
+     * If true, prioritizes image loading (eager load).
+     * Use for LCP images (e.g. Hero section) to improve performance.
+     * Default: false (lazy load).
+     */
+    priority?: boolean;
 }
 
 export default function SectionBackground({
@@ -16,7 +22,8 @@ export default function SectionBackground({
     alt = "Background",
     className,
     opacity = 0.4,
-    overlayColor = 'bg-neutral-950/90' // Default strong dark overlay
+    overlayColor = 'bg-neutral-950/90', // Default strong dark overlay
+    priority = false
 }: SectionBackgroundProps) {
     return (
         <div className={cn("absolute inset-0 -z-10 overflow-hidden pointer-events-none", className)}>
@@ -31,7 +38,7 @@ export default function SectionBackground({
                     fill
                     className="object-cover"
                     style={{ opacity: opacity }}
-                    priority={false}
+                    priority={priority}
                 />
             </div>
         </div>

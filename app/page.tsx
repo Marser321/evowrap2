@@ -28,6 +28,7 @@ export default function Home() {
             src="/images/backgrounds/porsche-993.png" // Using a high-quality car image
             opacity={0.6} // Increased opacity for visibility
             overlayColor="bg-gradient-to-t from-neutral-950 via-neutral-950/50 to-neutral-950/30" // Gradient overlay
+            priority={true} // ⚡ Bolt: Prioritize Hero image to improve LCP (Largest Contentful Paint)
           />
         </div>
 
