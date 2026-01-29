@@ -13,6 +13,7 @@ export interface ServiceData {
     subtitle: string;
     description: string;
     heroImage: string; // Placeholder for now
+    secondaryImage?: string;
     technicalSpecs: {
         label: string;
         value: string;
@@ -32,6 +33,7 @@ export const servicesData: Record<string, ServiceData> = {
         subtitle: 'Protección molecular de vanguardia para una estética inigualable.',
         description: 'Nuestro tratamiento cerámico crea una barrera química permanente que se une a la pintura de su vehículo. No es una cera, es una capa de vidrio líquido que endurece, proporcionando resistencia extrema a químicos, rayos UV y suciedad, manteniendo un brillo de exhibición por años.',
         heroImage: '/images/services/ceramic-macro.png',
+        secondaryImage: '/images/services/ceramic-card.png',
         technicalSpecs: [
             { label: 'Dureza', value: '9H/10H (Escala Mohs)' },
             { label: 'Duración', value: 'Hasta 5 años' },
@@ -87,6 +89,7 @@ export const servicesData: Record<string, ServiceData> = {
         subtitle: 'El escudo invisible definitivo contra impactos y desgaste.',
         description: 'El PPF es una película de poliuretano termoplástico transparente y autorregenerativa. Es la única protección real contra impactos de piedras, raspones de estacionamiento y vandalismo menor, manteniendo la pintura original intacta bajo un escudo invisible.',
         heroImage: '/images/services/ppf-macro.png',
+        secondaryImage: '/images/services/ppf-card.png',
         technicalSpecs: [
             { label: 'Espesor', value: '200 Micrones' },
             { label: 'Autorregeneración', value: 'Sí (con calor)' },
@@ -142,6 +145,7 @@ export const servicesData: Record<string, ServiceData> = {
         subtitle: 'Restauración profunda para una experiencia de cabina nueva.',
         description: 'No es solo una limpieza, es una restauración. Utilizamos vapor a alta presión, química enzimática y acondicionadores de cuero con pH neutro para devolver la textura, el olor y el acabado mate original de fábrica a su interior, eliminando bacterias y alérgenos.',
         heroImage: '/images/services/detailing-card.png',
+        secondaryImage: '/images/process/red-gtr-foam.jpg',
         technicalSpecs: [
             { label: 'Tiempo', value: '1 Día' },
             { label: 'Desinfección', value: 'Ozono / Vapor' },
