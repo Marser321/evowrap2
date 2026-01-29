@@ -1,187 +1,143 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, MousePointer2, ArrowDown, Sparkles } from 'lucide-react';
-import BookingCalendar from '@/components/booking/BookingCalendar';
-import TransformationShowcase from '@/components/home/TransformationShowcase';
-import EducationFAQ from '@/components/home/EducationFAQ';
-import ServicesHorizontal from '@/components/home/ServicesHorizontal';
-import BackgroundGlow from '@/components/layout/BackgroundGlow';
-import HeroBackground from '@/components/home/HeroBackground';
-import ProtectionDiagnosis from '@/components/home/ProtectionDiagnosis';
-import WhatsAppButton from '@/components/layout/WhatsAppButton';
-import SectionBackground from '@/components/ui/SectionBackground';
-import Footer from '@/components/layout/Footer';
+import { motion } from "framer-motion";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import Link from "next/link";
+import { ArrowRight, Shield, Zap, Star } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-neutral-950 text-white selection:bg-indigo-500 selection:text-white">
-      <BackgroundGlow />
-      <WhatsAppButton />
+    <main className="flex flex-col min-h-screen bg-neutral-950 text-white overflow-x-hidden">
 
-      {/* 1. HERO SECTION */}
-      <section className="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
-        {/* Background Layer */}
-        <div className="absolute inset-0 z-0">
-          <SectionBackground
-            src="/images/backgrounds/porsche-993.png" // Using a high-quality car image
-            opacity={0.6} // Increased opacity for visibility
-            overlayColor="bg-gradient-to-t from-neutral-950 via-neutral-950/50 to-neutral-950/30" // Gradient overlay
-          />
+      {/* --- HERO SECTION --- */}
+      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        {/* Video Placeholder Background */}
+        <div className="absolute inset-0 z-0 bg-neutral-900">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neutral-800 via-neutral-950 to-black opacity-80" />
+          {/* Simulate video movement/texture */}
+          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
         </div>
 
-        {/* Subtle Tech Overlay - Kept for "Evo" vibe but reduced */}
-        <div className="absolute inset-0 opacity-40 mix-blend-overlay pointer-events-none">
-          <HeroBackground />
-        </div>
+        {/* Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-black/60 z-10" />
 
-        <div className="relative z-10 max-w-5xl flex flex-col items-center">
+        {/* Hero Content */}
+        <div className="relative z-20 text-center max-w-5xl px-6">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="mb-6 inline-block"
-          >
-            {/* Logo Brand */}
-            <motion.div
-              className="relative w-72 md:w-[500px] h-32 mx-auto mb-4"
-            >
-              <img
-                src="/images/branding/logo-full.png"
-                alt="Evo Wrap Uruguay"
-                className="w-full h-full object-contain drop-shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
-              />
-            </motion.div>
-          </motion.div>
-
-          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-5xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9] mb-8 text-glow"
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            ESTÉTICA <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-gray-400">ABSOLUTA</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-lg md:text-2xl text-zinc-300 font-light max-w-2xl mx-auto mb-12 leading-relaxed drop-shadow-md"
-          >
-            Ingeniería de protección y diseño automotriz. <br className="hidden md:block" />
-            Elevamos el estándar de lo <span className="text-white font-normal italic">"impecable"</span>.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-          >
-            {/* Visualizer Mini-Entry */}
-            <Link
-              href="/visualizer"
-              className="group relative px-8 py-4 bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 text-white rounded-full font-bold uppercase tracking-widest text-sm flex items-center gap-3 transition-all hover:scale-105 overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.3)]"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/0 via-indigo-500/10 to-indigo-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <MousePointer2 className="w-4 h-4 text-indigo-400" />
-              <span className="relative z-10">Diseñar Mi Auto</span>
-            </Link>
-
-            <button
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 rounded-full bg-white text-black hover:bg-zinc-200 transition-colors uppercase tracking-widest font-bold text-sm shadow-[0_0_20px_rgba(255,255,255,0.2)] flex items-center gap-2"
-            >
-              Ver Servicios <ArrowRight className="w-4 h-4" />
-            </button>
-          </motion.div>
-        </div>
-
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="absolute bottom-10 text-white/50"
-        >
-          <ArrowDown className="w-6 h-6" />
-        </motion.div>
-      </section>
-
-      {/* 2. SERVICES HORIZONTAL SCROLL */}
-      <div id="services" className="relative">
-        <SectionBackground
-          src="/images/backgrounds/defender-side.png"
-          opacity={0.2}
-          overlayColor="bg-neutral-950/90"
-        />
-        <ServicesHorizontal />
-      </div>
-
-      {/* 3. DIAGNOSIS (SMART FEATURE) */}
-      <section id="diagnosis" className="py-24 px-4 relative z-10">
-        <SectionBackground
-          src="/images/backgrounds/gr-yaris-interior.png"
-          opacity={0.15}
-          overlayColor="bg-neutral-950/95"
-        />
-        <ProtectionDiagnosis />
-      </section>
-
-      {/* 4. SHOWCASE SECTION */}
-      <section className="py-24 md:py-32 px-4 relative">
-        <SectionBackground
-          src="/images/backgrounds/porsche-993.png"
-          opacity={0.15}
-          overlayColor="bg-neutral-950/90"
-        />
-        <TransformationShowcase />
-      </section>
-
-      {/* 5. EDUCATION SECTION */}
-      <section className="py-32 bg-neutral-900/30 border-y border-white/5 backdrop-blur-sm relative">
-        <SectionBackground
-          src="/images/backgrounds/gr-yaris-side.png"
-          opacity={0.1}
-          overlayColor="bg-neutral-950/95"
-        />
-        <EducationFAQ />
-      </section>
-
-      {/* 6. BOOKING SECTION */}
-      <section className="py-32 px-4 relative overflow-hidden">
-        <SectionBackground
-          src="/images/backgrounds/bmw-interior.png"
-          opacity={0.15}
-          overlayColor="bg-neutral-950/90"
-        />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-500/10 blur-[150px] rounded-full pointer-events-none" />
-
-        <div className="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-16 items-center relative z-10">
-          <div className="space-y-8 text-left">
-            <h2 className="text-5xl md:text-7xl font-bold leading-tight">
-              Agenda<br />
-              <span className="text-indigo-500">Exclusiva.</span>
+            <h2 className="text-neon-lime text-lg md:text-xl font-bold tracking-[0.3em] uppercase mb-4">
+              Automotive Luxury
             </h2>
-            <p className="text-xl text-zinc-400 max-w-md">
-              Un vehículo a la vez. Sin esperas, sin apuros.
+            <h1 className="text-5xl md:text-8xl font-black uppercase italic tracking-tighter mb-8 text-transparent bg-clip-text bg-gradient-to-br from-white via-neutral-200 to-neutral-500 drop-shadow-lg">
+              Reinventa <br /> Tu Vehículo
+            </h1>
+            <p className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
+              Protección invisible. Estética agresiva. El máximo nivel de detalle para quienes exigen perfección.
             </p>
 
-            <div className="p-8 bg-zinc-900/50 rounded-3xl border border-white/10 backdrop-blur-xl">
-              <button className="w-full py-4 bg-green-600 text-white font-bold rounded-xl hover:bg-green-500 transition-all shadow-lg hover:shadow-green-900/50 text-lg">
-                Escribir a Gonzalo
-              </button>
-            </div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block"
+            >
+              <Link
+                href="/booking"
+                className="bg-neon-lime text-black font-extrabold px-8 py-4 rounded-full text-lg uppercase tracking-wider hover:shadow-[0_0_30px_rgba(204,255,0,0.4)] transition-all flex items-center gap-2 group"
+              >
+                Cotizar Proyecto
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* --- BEFORE / AFTER SECTION (Wow Effect) --- */}
+      <section className="relative py-24 px-6 bg-neutral-950">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-5xl font-bold uppercase italic mb-4">
+              Transformación <span className="text-neon-cyan">Total</span>
+            </h3>
+            <p className="text-neutral-400 max-w-xl mx-auto">
+              Desliza para ver el poder de un cambio radical. De pintura estándar a un acabado mate de competición.
+            </p>
           </div>
 
-          <div className="bg-neutral-900 rounded-3xl p-4 border border-white/5 shadow-2xl">
-            <BookingCalendar />
+          <div className="max-w-5xl mx-auto">
+            <BeforeAfterSlider
+              beforeImage="/images/slider/before.png"
+              afterImage="/images/slider/after.png"
+              altText="Ferrari Transformation"
+            />
           </div>
         </div>
       </section>
 
-      <Footer />
+      {/* --- BENTO GRID GALLERY --- */}
+      <section className="relative py-24 px-6 bg-neutral-900/30 border-t border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-3xl md:text-4xl font-bold uppercase italic mb-12 text-center md:text-left">
+            Servicios <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-lime to-green-400">Elite</span>
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+            {/* Card 1: Large */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-2 row-span-1 md:row-span-2 relative group overflow-hidden rounded-3xl border border-white/5 bg-neutral-900/50 hover:border-white/10 transition-all"
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10" />
+              {/* Placeholder content for now - can use generated images or empty */}
+              <div className="absolute inset-0 bg-neutral-800 group-hover:scale-105 transition-transform duration-700" />
+
+              <div className="absolute bottom-0 left-0 p-8 z-20">
+                <Shield className="w-10 h-10 text-neon-cyan mb-4" />
+                <h4 className="text-3xl font-bold uppercase mb-2">Paint Protection Film</h4>
+                <p className="text-neutral-400">Escudo invisible de auto-curación contra impactos y arañazos.</p>
+              </div>
+            </motion.div>
+
+            {/* Card 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="relative group overflow-hidden rounded-3xl border border-white/5 bg-neutral-900/50 hover:border-neon-lime/30 transition-all"
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10" />
+              <div className="absolute inset-0 bg-neutral-800 group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute bottom-0 left-0 p-6 z-20">
+                <Zap className="w-8 h-8 text-neon-lime mb-2" />
+                <h4 className="text-xl font-bold uppercase">Color Change Wraps</h4>
+              </div>
+            </motion.div>
+
+            {/* Card 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="relative group overflow-hidden rounded-3xl border border-white/5 bg-neutral-900/50 hover:border-neon-cyan/30 transition-all"
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10" />
+              <div className="absolute inset-0 bg-neutral-800 group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute bottom-0 left-0 p-6 z-20">
+                <Star className="w-8 h-8 text-purple-400 mb-2" />
+                <h4 className="text-xl font-bold uppercase">Ceramic Coating</h4>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }
