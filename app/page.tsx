@@ -48,7 +48,7 @@ export default function Home() {
               className="relative w-72 md:w-[500px] h-32 mx-auto mb-4"
             >
               <img
-                src="/images/branding/logo-metal-dark.png"
+                src="/images/branding/logo-full.png"
                 alt="Evo Wrap Uruguay"
                 className="w-full h-full object-contain drop-shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
               />

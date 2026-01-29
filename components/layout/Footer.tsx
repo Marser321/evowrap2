@@ -21,7 +21,7 @@ export default function Footer() {
                     <div className="space-y-6">
                         <div className="w-48">
                             <img
-                                src="/images/branding/logo-metal-dark.png"
+                                src="/images/branding/logo-full.png"
                                 alt="Evo Wrap"
                                 className="w-full object-contain"
                             />
