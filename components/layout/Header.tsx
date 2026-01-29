@@ -48,7 +48,7 @@ export default function Header() {
                 <Link href="/" className="group flex items-center gap-2">
                     <div className="relative w-40 h-12 flex items-center justify-start">
                         <img
-                            src="/images/branding/logo-full.png"
+                            src="/images/branding/logo-ref.jpg"
                             alt="Evo Wrap"
                             className="h-full w-full object-contain transition-transform group-hover:scale-105"
                         />
