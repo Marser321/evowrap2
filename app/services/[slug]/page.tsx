@@ -101,11 +101,11 @@ export default function ServiceDetailPage() {
                     </div>
 
                     <div className="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 group">
-                        {/* Visual placeholder or secondary image */}
-                        <div className="absolute inset-0 bg-neutral-800 group-hover:scale-105 transition-transform duration-700" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="text-neutral-600 font-mono text-sm">[Imagen de Detalle Técnico]</span>
-                        </div>
+                        <img
+                            src={service.secondaryImage || service.gallery?.[0] || service.heroImage}
+                            alt={`${service.title} detail`}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
                     </div>
                 </div>
             </section>
