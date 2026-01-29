@@ -3,6 +3,7 @@
 import React from 'react';
 import { MapPin, Phone, Instagram, Mail } from 'lucide-react';
 import Link from 'next/link';
+import { Logo } from '@/components/Logo';
 
 export default function Footer() {
     return (
@@ -20,11 +21,7 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="space-y-6">
                         <div className="w-48">
-                            <img
-                                src="/images/branding/logo-full.png"
-                                alt="Evo Wrap"
-                                className="w-full object-contain"
-                            />
+                            <Logo className="w-full h-auto text-white" />
                         </div>
                         <p className="text-zinc-400 text-sm leading-relaxed max-w-xs">
                             Elevando la estética automotriz a niveles de arte. Protección, diseño y perfección en cada detalle.

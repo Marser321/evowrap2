@@ -1,19 +1,14 @@
-'use client';
-
-import { cn } from '@/lib/utils';
+import React from 'react';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 interface SectionBackgroundProps {
-    src: string;
+    src?: string;
     alt?: string;
     className?: string;
+    overlayClassName?: string;
+    children?: React.ReactNode;
     opacity?: number;
-    overlayColor?: string; // e.g., 'bg-neutral-950/80'
-    /**
-     * If true, prioritizes image loading (eager load).
-     * Use for LCP images (e.g. Hero section) to improve performance.
-     * Default: false (lazy load).
-     */
     priority?: boolean;
 }
 
@@ -21,26 +16,42 @@ export default function SectionBackground({
     src,
     alt = "Background",
     className,
+    overlayClassName,
+    children,
     opacity = 0.4,
-    overlayColor = 'bg-neutral-950/90', // Default strong dark overlay
     priority = false
 }: SectionBackgroundProps) {
     return (
-        <div className={cn("absolute inset-0 -z-10 overflow-hidden pointer-events-none", className)}>
-            <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-transparent to-neutral-950 z-10" />
-            <div className={cn("absolute inset-0 z-10 backdrop-blur-[2px]", overlayColor)} />
-
-            {/* Image Container */}
-            <div className="relative w-full h-full">
+        <div className={cn("absolute inset-0 z-0 overflow-hidden", className)}>
+            {/* Background Image/Video Placeholder */}
+            {src ? (
                 <Image
                     src={src}
                     alt={alt}
                     fill
-                    className="object-cover"
-                    style={{ opacity: opacity }}
-                    priority={priority}
+                    className="object-cover object-center"
+                    priority={priority} // Optimized LCP control
+                    quality={80}
                 />
-            </div>
+            ) : (
+                // Fallback: Abstract Dark Gradient if no image provided
+                <div className="absolute inset-0 bg-neutral-900 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
+            )}
+
+            {/* Dynamic Overlay for Text Legibility */}
+            <div
+                className={cn(
+                    "absolute inset-0 bg-neutral-950",
+                    overlayClassName
+                )}
+                style={{ opacity }}
+            />
+
+            {/* Texture Overlay (Noise) for "Film" look */}
+            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay pointer-events-none" />
+
+            {/* Content Injection (if needed directly in bg container) */}
+            {children && <div className="relative z-10">{children}</div>}
         </div>
     );
 }

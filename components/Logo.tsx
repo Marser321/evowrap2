@@ -1,54 +1,43 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 
 export const Logo = ({ className }: { className?: string }) => {
     return (
-        <div className={className}>
+        <div className={cn("relative flex items-center justify-center", className)}>
             <svg
-                viewBox="0 0 300 100"
+                viewBox="0 0 500 100" // Adjusted aspect ratio for the wide logo
+                fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-full w-auto"
                 aria-label="Evo Wrap Logo"
             >
-                <defs>
-                    <linearGradient id="gradB" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style={{ stopColor: "#fff", stopOpacity: 1 }} />
-                        <stop offset="100%" style={{ stopColor: "#ccc", stopOpacity: 1 }} />
-                    </linearGradient>
-                </defs>
+                {/* --- Emblem (Left Side) --- */}
+                <g transform="translate(10, 10) scale(0.8)">
+                    {/* Outer Hexagon Shield Parts */}
+                    <path d="M20,10 L70,10 L85,50 L70,90 L20,90 L5,50 Z" fill="none" stroke="currentColor" strokeWidth="8" strokeLinejoin="round" />
 
+                    {/* Stylized 'E' / 'W' inside */}
+                    <path d="M30,30 L60,30 M30,50 L55,50 M30,70 L60,70" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
+                    {/* Diagonal cuts for speed/aggression */}
+                    <path d="M65,30 L55,70" fill="none" stroke="currentColor" strokeWidth="4" />
+                </g>
+
+                {/* --- Top & Bottom Horizontal Lines --- */}
+                {/* Connect from emblem area to end of text */}
+                <rect x="90" y="15" width="400" height="8" rx="2" fill="currentColor" />
+                <rect x="90" y="77" width="400" height="8" rx="2" fill="currentColor" />
+
+                {/* --- Text "EVOWRAP" --- */}
                 <text
-                    x="10"
-                    y="70"
-                    fontFamily="Impact, sans-serif"
-                    fontStyle="italic"
-                    fontSize="60"
-                    fill="url(#gradB)"
-                    transform="skewX(-15)"
-                    letterSpacing="-2"
+                    x="100"
+                    y="68"
+                    fontFamily="Arial, Helvetica, sans-serif"
+                    fontWeight="900"
+                    fontSize="50"
+                    letterSpacing="2"
+                    fill="currentColor"
                 >
-                    EVO
-                </text>
-
-                {/* "Speed Line" underline */}
-                <path
-                    d="M10 80 L280 80 L260 85 L-10 85 Z"
-                    fill="#ccff00"
-                    transform="skewX(-15)"
-                />
-
-                <text
-                    x="130"
-                    y="70"
-                    fontFamily="Arial, sans-serif"
-                    fontWeight="800"
-                    fontStyle="italic"
-                    fontSize="60"
-                    fill="none"
-                    stroke="#ccff00"
-                    strokeWidth="2"
-                    transform="skewX(-15)"
-                >
-                    WRAP
+                    EVOWRAP
                 </text>
             </svg>
         </div>
