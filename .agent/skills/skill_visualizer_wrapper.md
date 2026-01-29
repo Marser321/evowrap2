@@ -1,0 +1,2 @@
+Propósito: Integrar una funcionalidad donde el cliente pueda previsualizar colores de vinilo. Instrucción para el Agente:
+"Para la sección de 'Ploteo Vehicular', crea un componente que permita subir una foto del auto. Usa una capa de superposición (overlay) con mezcla de colores CSS (mix-blend-mode) para simular cómo se vería el auto en Mate, Satén o Gloss. No necesitamos IA generativa costosa al principio, usa manipulación de canvas HTML5 para el MVP."

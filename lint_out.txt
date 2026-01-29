@@ -1,0 +1,333 @@
+﻿
+> evo-wrap@0.1.0 lint
+> eslint
+
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\._eslint.config.mjs
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\._next-env.d.ts
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\._next.config.ts
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\._postcss.config.mjs
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\app\._layout.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\app\._page.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\app\admin\._layout.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\app\admin\._page.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\app\admin\layout.tsx
+  15:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\app\booking\._page.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\app\page.tsx
+   5:10  warning  'ArrowLeft' is defined but never used                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+   5:59  warning  'Sparkles' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+  50:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  75:88  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  75:98  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\app\services\[slug]\._page.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\app\services\[slug]\page.tsx
+    7:21  warning  'Clock' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+    7:28  warning  'Shield' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+    7:36  warning  'Sparkles' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+    7:46  warning  'Droplets' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+    7:56  warning  'Trophy' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   34:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+   48:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  131:37  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\app\visualizer\._page.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\admin\._AppointmentsTable.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\admin\AppointmentsTable.tsx
+   4:10  warning  'MoreHorizontal' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+  41:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\admin\AppointmentsTable.tsx:41:9
+  39 |
+  40 |     useEffect(() => {
+> 41 |         fetchAppointments();
+     |         ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  42 |
+  43 |         // Optional: Real-time subscription could go here
+  44 |     }, []);  react-hooks/set-state-in-effect
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\booking\._BookingCalendar.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\booking\BookingCalendar.tsx
+  8:26  warning  'setSelectedDate' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\hero\._CanvasSequence.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\hero\._HeroVideo.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\hero\CanvasSequence.tsx
+  90:8  warning  React Hook useEffect has a missing dependency: 'renderFrame'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\._EducationFAQ.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\._HeroBackground.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\._ProtectionDiagnosis.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\._ServicesHorizontal.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\._TransformationShowcase.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\HeroBackground.tsx
+  64:32  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\HeroBackground.tsx:64:32
+  62 |                         key={i}
+  63 |                         initial={{
+> 64 |                             x: Math.random() * 1000 - 500 + "%",
+     |                                ^^^^^^^^^^^^^ Cannot call impure function
+  65 |                             y: Math.random() * 1000 - 500 + "%",
+  66 |                             opacity: Math.random() * 0.5 + 0.2,
+  67 |                         }}                                               react-hooks/purity
+  65:32  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\HeroBackground.tsx:65:32
+  63 |                         initial={{
+  64 |                             x: Math.random() * 1000 - 500 + "%",
+> 65 |                             y: Math.random() * 1000 - 500 + "%",
+     |                                ^^^^^^^^^^^^^ Cannot call impure function
+  66 |                             opacity: Math.random() * 0.5 + 0.2,
+  67 |                         }}
+  68 |                         animate={{                                            react-hooks/purity
+  66:38  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\HeroBackground.tsx:66:38
+  64 |                             x: Math.random() * 1000 - 500 + "%",
+  65 |                             y: Math.random() * 1000 - 500 + "%",
+> 66 |                             opacity: Math.random() * 0.5 + 0.2,
+     |                                      ^^^^^^^^^^^^^ Cannot call impure function
+  67 |                         }}
+  68 |                         animate={{
+  69 |                             y: [null, Math.random() * 100 - 50 + "%"],  react-hooks/purity
+  69:39  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\HeroBackground.tsx:69:39
+  67 |                         }}
+  68 |                         animate={{
+> 69 |                             y: [null, Math.random() * 100 - 50 + "%"],
+     |                                       ^^^^^^^^^^^^^ Cannot call impure function
+  70 |                             opacity: [0, 1, 0],
+  71 |                         }}
+  72 |                         transition={{                                                                                  react-hooks/purity
+  73:39  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\HeroBackground.tsx:73:39
+  71 |                         }}
+  72 |                         transition={{
+> 73 |                             duration: Math.random() * 10 + 10,
+     |                                       ^^^^^^^^^^^^^ Cannot call impure function
+  74 |                             repeat: Infinity,
+  75 |                             ease: "linear",
+  76 |                         }}                                                                                   react-hooks/purity
+  79:38  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\HeroBackground.tsx:79:38
+  77 |                         className="absolute w-1 h-1 bg-white rounded-full blur-[1px]"
+  78 |                         style={{
+> 79 |                             left: `${Math.random() * 100}%`,
+     |                                      ^^^^^^^^^^^^^ Cannot call impure function
+  80 |                             top: `${Math.random() * 100}%`,
+  81 |                         }}
+  82 |                     />                                       react-hooks/purity
+  80:37  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\HeroBackground.tsx:80:37
+  78 |                         style={{
+  79 |                             left: `${Math.random() * 100}%`,
+> 80 |                             top: `${Math.random() * 100}%`,
+     |                                     ^^^^^^^^^^^^^ Cannot call impure function
+  81 |                         }}
+  82 |                     />
+  83 |                 ))}                                                                                                          react-hooks/purity
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\ServicesHorizontal.tsx
+  93:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\home\TransformationShowcase.tsx
+  29:64  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  30:64  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  34:67  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  35:67  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  40:67  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  41:67  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  77:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  93:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\._BackgroundGlow.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\._BackgroundNoise.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\._Footer.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\._Header.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\._HorizontalScroll.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\._Slide.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\._WhatsAppButton.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\BackgroundNoise.tsx
+  10:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\BackgroundNoise.tsx:10:9
+   8 |     useEffect(() => {
+   9 |         // Fade in to avoid flash
+> 10 |         setOpacity(0.04);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  11 |     }, []);
+  12 |
+  13 |     return (  react-hooks/set-state-in-effect
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\Footer.tsx
+  23:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\Header.tsx
+  50:25  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\HorizontalScroll.tsx
+  3:18  warning  'useEffect' is defined but never used                 @typescript-eslint/no-unused-vars
+  4:10  warning  'motion' is defined but never used                    @typescript-eslint/no-unused-vars
+  4:29  warning  'useTransform' is defined but never used              @typescript-eslint/no-unused-vars
+  8:13  warning  'scrollXProgress' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\layout\Slide.tsx
+   4:10  warning  'motion' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  21:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\services\._ComparisonSlider.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\services\._ProcessTimeline.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\services\ComparisonSlider.tsx
+   3:28  warning  'useEffect' is defined but never used            @typescript-eslint/no-unused-vars
+   4:18  warning  'useMotionValue' is defined but never used       @typescript-eslint/no-unused-vars
+   4:34  warning  'useTransform' is defined but never used         @typescript-eslint/no-unused-vars
+  24:12  warning  'isDragging' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\services\ProcessTimeline.tsx
+   3:18  warning  'useId' is defined but never used  @typescript-eslint/no-unused-vars
+  77:38  warning  'total' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\ui\._BackgroundBeams.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\ui\._BrandWatermark.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\ui\._GlassCard.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\ui\._Logo.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\ui\._SectionBackground.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\ui\BrandWatermark.tsx
+  25:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\ui\Logo.tsx
+   4:8   warning  'Image' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  35:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\components\visualizer\._VisualizerStage.tsx
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\lib\._businessLogic.ts
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\lib\._services-data.ts
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\lib\._supabase.ts
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\lib\._utils.ts
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\lib\._webhookService.ts
+  1:0  error  Parsing error: Invalid character
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\lib\businessLogic.ts
+  20:9  error  'products' is never reassigned. Use 'const' instead  prefer-const
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\lib\services-data.ts
+  1:38  warning  'Sun' is defined but never used           @typescript-eslint/no-unused-vars
+  6:11  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\morer\OneDrive\Desktop\EvoWrap\lib\webhookService.ts
+  1:80  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Ô£û 96 problems (61 errors, 35 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+

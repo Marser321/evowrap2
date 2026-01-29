@@ -1,0 +1,82 @@
+{
+    "name": "Evo Wrap Automation",
+    "nodes": [
+        {
+            "parameters": {
+                "path": "evo-notify",
+                "responseMode": "lastNode",
+                "options": {}
+            },
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [
+                250,
+                300
+            ],
+            "id": "webhook-trigger",
+            "name": "Webhook (Evo App)"
+        },
+        {
+            "parameters": {
+                "values": {
+                    "string": [
+                        {
+                            "name": "message_body",
+                            "value": "Hola {{ $json.body.client_name }}! 👋\n\nTu vehículo ({{ $json.body.service_name }}) está *Listo para Entrega* 🚗✨.\n\nPuedes pasar a retirarlo por nuestro taller en Maldonado.\n\nSaludos,\nEl equipo de EVO WRAP."
+                        }
+                    ]
+                },
+                "options": {}
+            },
+            "type": "n8n-nodes-base.set",
+            "typeVersion": 1,
+            "position": [
+                450,
+                300
+            ],
+            "id": "format-message",
+            "name": "Format WhatsApp Msg"
+        },
+        {
+            "parameters": {
+                "operation": "executeQuery",
+                "query": "INSERT INTO public.historial_notificaciones (cliente, mensaje, fecha) VALUES ($1, $2, NOW())",
+                "additionalFields": {
+                    "queryParams": "{{ $json.client_name }}, {{ $json.message_body }}"
+                }
+            },
+            "type": "n8n-nodes-base.postgres",
+            "typeVersion": 1,
+            "position": [
+                650,
+                300
+            ],
+            "id": "log-db",
+            "name": "Log to Supabase (Optional)"
+        }
+    ],
+    "connections": {
+        "Webhook (Evo App)": {
+            "main": [
+                [
+                    {
+                        "node": "Format WhatsApp Msg",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Format WhatsApp Msg": {
+            "main": [
+                [
+                    {
+                        "node": "Log to Supabase (Optional)",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    }
+}
