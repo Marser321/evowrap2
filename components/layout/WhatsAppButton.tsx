@@ -47,10 +47,11 @@ export default function WhatsAppButton() {
             </AnimatePresence>
 
             <button
+                aria-label={`Contactar por WhatsApp: ${contextMessage}`}
                 className="relative group p-4 bg-green-500 rounded-full text-white shadow-[0_0_20px_rgba(22,197,90,0.5)] hover:bg-green-400 transition-colors transform hover:scale-110"
                 onClick={() => window.open(`https://wa.me/59899999999?text=${encodeURIComponent(contextMessage)}`, '_blank')}
             >
-                <MessageCircle size={32} fill="white" className="relative z-10" />
+                <MessageCircle aria-hidden="true" size={32} fill="white" className="relative z-10" />
                 <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-20" />
             </button>
         </div>
