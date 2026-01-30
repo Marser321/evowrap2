@@ -9,9 +9,9 @@ export default function AdminDashboard() {
             {/* KPIs */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                <div className="p-6 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-indigo-500/30 transition-colors">
+                <div className="p-6 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-gold-500/30 transition-colors">
                     <div className="flex items-center gap-4 mb-4">
-                        <div className="p-3 bg-green-500/10 rounded-xl text-green-400">
+                        <div className="p-3 bg-gold-500/10 rounded-xl text-gold-500">
                             <TrendingUp className="w-6 h-6" />
                         </div>
                         <div>
@@ -20,13 +20,13 @@ export default function AdminDashboard() {
                         </div>
                     </div>
                     <div className="text-xs text-zinc-500">
-                        <span className="text-green-400 font-bold">+12%</span> vs mes anterior
+                        <span className="text-gold-500 font-bold">+12%</span> vs mes anterior
                     </div>
                 </div>
 
-                <div className="p-6 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-indigo-500/30 transition-colors">
+                <div className="p-6 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-gold-500/30 transition-colors">
                     <div className="flex items-center gap-4 mb-4">
-                        <div className="p-3 bg-indigo-500/10 rounded-xl text-indigo-400">
+                        <div className="p-3 bg-amber-500/10 rounded-xl text-amber-500">
                             <Car className="w-6 h-6" />
                         </div>
                         <div>
@@ -35,13 +35,13 @@ export default function AdminDashboard() {
                         </div>
                     </div>
                     <div className="w-full bg-zinc-800 h-1.5 rounded-full mt-2 overflow-hidden">
-                        <div className="bg-indigo-500 h-full w-[80%]" />
+                        <div className="bg-amber-600 h-full w-[80%]" />
                     </div>
                 </div>
 
-                <div className="p-6 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-indigo-500/30 transition-colors">
+                <div className="p-6 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-gold-500/30 transition-colors">
                     <div className="flex items-center gap-4 mb-4">
-                        <div className="p-3 bg-purple-500/10 rounded-xl text-purple-400">
+                        <div className="p-3 bg-zinc-500/10 rounded-xl text-zinc-300">
                             <CalendarCheck className="w-6 h-6" />
                         </div>
                         <div>
@@ -50,8 +50,8 @@ export default function AdminDashboard() {
                         </div>
                     </div>
                     <div className="flex -space-x-2">
-                        <div className="w-8 h-8 rounded-full bg-zinc-700 border-2 border-zinc-900 flex items-center justify-center text-xs">JP</div>
-                        <div className="w-8 h-8 rounded-full bg-zinc-700 border-2 border-zinc-900 flex items-center justify-center text-xs">CD</div>
+                        <div className="w-8 h-8 rounded-full bg-gold-600/20 border-2 border-zinc-900 flex items-center justify-center text-[10px] font-bold text-gold-500">JP</div>
+                        <div className="w-8 h-8 rounded-full bg-gold-600/20 border-2 border-zinc-900 flex items-center justify-center text-[10px] font-bold text-gold-500">CD</div>
                     </div>
                 </div>
 

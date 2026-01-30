@@ -168,7 +168,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="relative group overflow-hidden rounded-3xl border border-white/10 bg-neutral-900/40 backdrop-blur-sm hover:border-neon-lime/50 transition-all duration-500"
+              className="relative group overflow-hidden rounded-3xl border border-white/10 bg-neutral-900/40 backdrop-blur-sm hover:border-gold-500/50 transition-all duration-500"
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0">
                 <SectionBackground

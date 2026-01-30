@@ -175,7 +175,7 @@ export default function ServiceDetailPage() {
                                 className="p-6 rounded-2xl bg-neutral-900/40 border border-white/5 hover:border-white/20 transition-all backdrop-blur-sm"
                             >
                                 <h3 className="text-lg font-bold mb-2 text-white flex items-start gap-3">
-                                    <span className="text-neon-lime mt-1"><CheckCircle2 size={16} /></span>
+                                    <span className="text-gold-500 mt-1"><CheckCircle2 size={16} /></span>
                                     {item.question}
                                 </h3>
                                 <p className="text-neutral-400 ml-7 text-sm leading-relaxed">
@@ -195,12 +195,12 @@ export default function ServiceDetailPage() {
                     overlayClassName="bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-transparent"
                 />
 
-                <div className="max-w-3xl mx-auto p-12 rounded-3xl border border-white/10 backdrop-blur-md relative z-10 bg-black/20">
+                <div className="max-w-3xl mx-auto p-12 rounded-3xl border border-white/10 backdrop-blur-md relative z-10 bg-black/20 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
                     <h2 className="text-4xl md:text-5xl font-black mb-6 uppercase italic">¿Listo para transformar su vehículo?</h2>
                     <p className="text-zinc-300 mb-8 text-lg font-light">
                         Agenda una evaluación personalizada. Trabajamos con un número limitado de vehículos por semana.
                     </p>
-                    <Link href="/booking" className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-neon-lime text-black font-extrabold rounded-full overflow-hidden hover:bg-white transition-all shadow-[0_0_30px_rgba(204,255,0,0.4)]">
+                    <Link href="/booking" className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-gold-600 text-black font-extrabold rounded-full overflow-hidden hover:bg-gold-500 transition-all shadow-[0_0_30px_rgba(245,158,11,0.4)]">
                         <MessageCircle className="w-5 h-5" />
                         <span>Agendar Diagnóstico</span>
                         <div className="absolute inset-0 rounded-full ring-2 ring-white/20 group-hover:scale-105 transition-transform" />
