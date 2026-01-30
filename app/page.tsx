@@ -5,7 +5,7 @@ import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import SectionBackground from "@/components/ui/SectionBackground";
 import Link from "next/link";
 import { ArrowRight, Shield, Zap, Star } from "lucide-react";
-import { Logo } from "@/components/Logo";
+import Logo from "@/components/ui/Logo";
 
 export default function Home() {
   return (
