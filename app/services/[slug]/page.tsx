@@ -8,7 +8,7 @@ import { ArrowLeft, CheckCircle2, MessageCircle } from 'lucide-react';
 import { servicesData } from '@/lib/services-data';
 import { ProcessTimeline } from '@/components/services/ProcessTimeline';
 import SectionBackground from '@/components/ui/SectionBackground';
-import { Logo } from '@/components/Logo';
+import Logo from '@/components/ui/Logo';
 
 export default function ServiceDetailPage() {
     const params = useParams();
