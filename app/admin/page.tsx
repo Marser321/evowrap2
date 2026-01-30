@@ -76,11 +76,12 @@ export default function AdminDashboard() {
 }
 
 function KPICard({ title, value, change, icon: Icon, color }: any) {
-    const colorStyles = {
+    const stylesMap = {
         gold: "bg-gold-500/10 text-gold-400 border-gold-500/20",
         amber: "bg-amber-500/10 text-amber-400 border-amber-500/20",
         zinc: "bg-white/5 text-white border-white/10",
-    }[color as keyof typeof colorStyles] || "bg-white/5 text-white border-white/10";
+    };
+    const colorStyles = stylesMap[color as keyof typeof stylesMap] || "bg-white/5 text-white border-white/10";
 
     return (
         <motion.div
