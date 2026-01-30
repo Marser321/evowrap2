@@ -1,88 +1,136 @@
 'use client';
 
-import React from 'react';
-import { MapPin, Phone, Instagram, Mail } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { ArrowRight, Instagram, MapPin, Mail, Phone } from 'lucide-react';
 import Logo from '@/components/ui/Logo';
 
-export default function Footer() {
-    return (
-        <footer className="relative bg-neutral-900 text-white overflow-hidden">
-            {/* Background Image - Rear of Sports Car */}
-            <div className="absolute inset-0 z-0">
-                <div
-                    className="absolute inset-0 bg-cover bg-center opacity-40 bg-[url('/images/showcase/black-mustang.png')]" // Using black mustang as placeholder for rear car
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-transparent" />
-            </div>
+const footerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: i * 0.1,
+            type: "spring" as const,
+            stiffness: 50,
+            damping: 20
+        }
+    })
+};
 
-            <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                    {/* Brand Column */}
-                    <div className="space-y-6">
-                        <div className="w-48">
-                            <Logo className="w-full h-auto text-white" />
-                        </div>
-                        <p className="text-zinc-400 text-sm leading-relaxed max-w-xs">
-                            Elevando la estética automotriz a niveles de arte. Protección, diseño y perfección en cada detalle.
+export default function Footer() {
+    const currentYear = new Date().getFullYear();
+
+    return (
+        <footer className="bg-neutral-950 text-white pt-24 pb-12 relative overflow-hidden border-t border-white/5">
+            {/* Background Texture */}
+            <div className="absolute inset-0 z-0 opacity-20 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay" />
+
+            {/* Gold Glow Top */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60vw] h-[1px] bg-gradient-to-r from-transparent via-gold-500/50 to-transparent shadow-[0_0_50px_rgba(245,158,11,0.2)]" />
+
+            <div className="container max-w-7xl mx-auto px-6 relative z-10">
+
+                {/* 1. TOP CTA SECTION */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col md:flex-row justify-between items-center border-b border-white/10 pb-16 mb-16 gap-8"
+                >
+                    <div className="max-w-2xl text-center md:text-left">
+                        <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
+                            ¿Listo para la <span className="text-gold-500">Transformación?</span>
+                        </h2>
+                        <p className="text-neutral-400 text-lg font-light">
+                            Agenda tu cita hoy y eleva la estética de tu vehículo al siguiente nivel.
                         </p>
                     </div>
 
-                    {/* Navigation */}
-                    <div>
-                        <h4 className="font-bold text-lg mb-6 text-white uppercase tracking-wider">Explorar</h4>
-                        <ul className="space-y-4 text-zinc-400">
-                            <li><Link href="/services/ppf" className="hover:text-indigo-400 transition-colors">Paint Protection Film</Link></li>
-                            <li><Link href="/services/ceramic" className="hover:text-indigo-400 transition-colors">Tratamiento Cerámico</Link></li>
-                            <li><Link href="/services/wrapping" className="hover:text-indigo-400 transition-colors">Vinyl Wrapping</Link></li>
-                            <li><Link href="/visualizer" className="hover:text-indigo-400 transition-colors">Visualizador 3D</Link></li>
-                        </ul>
-                    </div>
+                    <Link
+                        href="/reservar"
+                        className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-neutral-950 font-bold uppercase tracking-widest rounded-full hover:bg-gold-500 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)]"
+                    >
+                        <span className="relative z-10">Agendar Ahora</span>
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                </motion.div>
 
-                    {/* Contact Info */}
-                    <div>
-                        <h4 className="font-bold text-lg mb-6 text-white uppercase tracking-wider">Contacto</h4>
-                        <ul className="space-y-4 text-zinc-400">
-                            <li className="flex items-start gap-3">
-                                <MapPin className="w-5 h-5 text-indigo-500 shrink-0 mt-1" />
+
+                {/* 2. MAIN GRID */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+
+                    {/* Brand Column */}
+                    <motion.div custom={0} initial="hidden" whileInView="visible" variants={footerVariants} viewport={{ once: true }}>
+                        <div className="mb-6 w-48">
+                            <Logo variant="footer" className="text-white w-full h-auto" />
+                        </div>
+                        <p className="text-neutral-500 leading-relaxed font-light text-sm max-w-xs">
+                            Especialistas en protección y estética automotriz premium. PPF, Cerámicos y Wrapping de clase mundial en Uruguay.
+                        </p>
+                    </motion.div>
+
+                    {/* Navigation */}
+                    <motion.div custom={1} initial="hidden" whileInView="visible" variants={footerVariants} viewport={{ once: true }}>
+                        <h4 className="text-lg font-bold uppercase tracking-wider mb-6 text-white">Explorar</h4>
+                        <ul className="space-y-4 text-neutral-400 text-sm font-medium">
+                            {['Inicio', 'Servicios', 'Transformación', 'Reservar'].map((item) => (
+                                <li key={item}>
+                                    <Link href={item === 'Inicio' ? '/' : `/${item.toLowerCase()}`} className="hover:text-gold-500 transition-colors flex items-center gap-2 group">
+                                        <span className="w-0 group-hover:w-2 h-[1px] bg-gold-500 transition-all duration-300" />
+                                        {item}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
+
+                    {/* Contact */}
+                    <motion.div custom={2} initial="hidden" whileInView="visible" variants={footerVariants} viewport={{ once: true }}>
+                        <h4 className="text-lg font-bold uppercase tracking-wider mb-6 text-white">Contacto</h4>
+                        <ul className="space-y-4 text-neutral-400 text-sm">
+                            <li className="flex gap-4">
+                                <MapPin className="w-5 h-5 text-gold-500 shrink-0" />
                                 <span>Santa Tereza 719<br />Maldonado, Punta del Este</span>
                             </li>
-                            <li className="flex items-center gap-3">
-                                <Phone className="w-5 h-5 text-indigo-500 shrink-0" />
-                                <span>+598 99 123 456</span>
+                            <li className="flex gap-4 items-center">
+                                <Phone className="w-5 h-5 text-gold-500 shrink-0" />
+                                <span className="hover:text-white transition-colors cursor-pointer">+598 99 123 456</span>
                             </li>
-                            <li className="flex items-center gap-3">
-                                <Mail className="w-5 h-5 text-indigo-500 shrink-0" />
-                                <span>contacto@evowrap.uy</span>
+                            <li className="flex gap-4 items-center">
+                                <Mail className="w-5 h-5 text-gold-500 shrink-0" />
+                                <span className="hover:text-white transition-colors cursor-pointer">contacto@evowrap.uy</span>
                             </li>
                         </ul>
-                    </div>
+                    </motion.div>
 
-                    {/* Social / CTA */}
-                    <div>
-                        <h4 className="font-bold text-lg mb-6 text-white uppercase tracking-wider">Síguenos</h4>
-                        <div className="flex gap-4 mb-8">
-                            <Link href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-indigo-600 transition-colors">
-                                <Instagram className="w-5 h-5" />
+                    {/* Socials */}
+                    <motion.div custom={3} initial="hidden" whileInView="visible" variants={footerVariants} viewport={{ once: true }}>
+                        <h4 className="text-lg font-bold uppercase tracking-wider mb-6 text-white">Social</h4>
+                        <div className="flex gap-4">
+                            <Link href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 hover:text-black hover:bg-gold-500 hover:border-gold-500 transition-all duration-300 group">
+                                <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
                             </Link>
-                            {/* Add more social icons if needed */}
+                            {/* Add logic for more socials if needed */}
                         </div>
-                        <Link
-                            href="/booking"
-                            className="inline-block px-6 py-3 rounded-full bg-white text-black font-bold uppercase text-xs tracking-widest hover:bg-zinc-200 transition-colors"
-                        >
-                            Agendar Cita
-                        </Link>
-                    </div>
+                    </motion.div>
                 </div>
 
-                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-500">
-                    <p>© {new Date().getFullYear()} Evo Wrap Uruguay. Todos los derechos reservados.</p>
-                    <div className="flex gap-6">
-                        <Link href="#">Privacidad</Link>
-                        <Link href="#">Términos</Link>
+                {/* 3. BOTTOM BAR */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-600 font-medium uppercase tracking-wider"
+                >
+                    <p>© {currentYear} Evo Wrap Uruguay.</p>
+                    <div className="flex gap-8">
+                        <Link href="#" className="hover:text-white transition-colors">Privacidad</Link>
+                        <Link href="#" className="hover:text-white transition-colors">Términos</Link>
                     </div>
-                </div>
+                </motion.div>
+
             </div>
         </footer>
     );
