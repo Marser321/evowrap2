@@ -37,7 +37,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-neon-lime text-lg md:text-2xl font-bold tracking-[0.3em] uppercase mb-6"
+              className="text-gold-500 text-lg md:text-2xl font-bold tracking-[0.3em] uppercase mb-6"
             >
               Automotive Luxury
             </motion.h2>
@@ -60,7 +60,7 @@ export default function Home() {
             >
               <Link
                 href="/booking"
-                className="bg-neon-lime text-black font-extrabold px-8 py-4 rounded-full text-lg uppercase tracking-wider hover:bg-white hover:shadow-[0_0_30px_rgba(204,255,0,0.4)] transition-all flex items-center gap-2 group"
+                className="bg-gold-500 text-black font-extrabold px-8 py-4 rounded-full text-lg uppercase tracking-wider hover:bg-white hover:shadow-[0_0_30px_rgba(245,158,11,0.4)] transition-all flex items-center gap-2 group"
               >
                 Cotizar Proyecto
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -97,7 +97,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h3 className="text-4xl md:text-6xl font-black uppercase italic mb-4">
-              Transformación <span className="text-neon-cyan drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">Total</span>
+              Transformación <span className="text-gold-500 drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]">Total</span>
             </h3>
             <p className="text-neutral-400 max-w-xl mx-auto text-lg">
               Desliza para descubrir el cambio radical. De lo estándar a lo extraordinario.
