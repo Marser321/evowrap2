@@ -102,8 +102,9 @@ export default function BeforeAfterSlider({
                 className="absolute inset-y-0 w-1 bg-gradient-to-b from-transparent via-gold-500 to-transparent z-20 pointer-events-none shadow-[0_0_20px_rgba(245,158,11,0.8)]"
                 style={{ left: `${sliderPosition}%` }}
             >
-                <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-12 h-12 bg-black/80 border border-gold-500/50 rounded-full flex items-center justify-center backdrop-blur-lg shadow-[0_0_15px_rgba(245,158,11,0.3)]">
-                    <MoveHorizontal className="w-6 h-6 text-gold-500" />
+                <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-12 h-12 bg-black/80 border border-gold-500/50 rounded-full flex items-center justify-center backdrop-blur-lg shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-transform hover:scale-110">
+                    <div className="absolute inset-0 rounded-full bg-gold-500/20 animate-ping" />
+                    <MoveHorizontal className="w-6 h-6 text-gold-500 relative z-10" />
                 </div>
             </div>
         </div>
