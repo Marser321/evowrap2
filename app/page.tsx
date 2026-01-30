@@ -156,7 +156,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
 
               <div className="absolute bottom-0 left-0 p-10 z-20">
-                <Shield className="w-12 h-12 text-neon-cyan mb-6 group-hover:scale-110 transition-transform duration-300" />
+                <Shield className="w-12 h-12 text-gold-500 mb-6 group-hover:scale-110 transition-transform duration-300" />
                 <h4 className="text-3xl font-black uppercase italic mb-3">Paint Protection Film</h4>
                 <p className="text-neutral-300 max-w-md">Escudo invisible de auto-curación contra impactos, arañazos y elementos ambientales. Garantía de 10 años.</p>
               </div>
@@ -178,7 +178,7 @@ export default function Home() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
               <div className="absolute bottom-0 left-0 p-8 z-20">
-                <Zap className="w-10 h-10 text-neon-lime mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <Zap className="w-10 h-10 text-gold-500 mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <h4 className="text-2xl font-black uppercase italic mb-2">Color Change</h4>
                 <p className="text-neutral-400 text-sm">Personalización total con vinilos premium.</p>
               </div>
@@ -190,7 +190,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="relative group overflow-hidden rounded-3xl border border-white/10 bg-neutral-900/40 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-500"
+              className="relative group overflow-hidden rounded-3xl border border-white/10 bg-neutral-900/40 backdrop-blur-sm hover:border-gold-500/50 transition-all duration-500"
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0">
                 <SectionBackground
@@ -200,7 +200,7 @@ export default function Home() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
               <div className="absolute bottom-0 left-0 p-8 z-20">
-                <Star className="w-10 h-10 text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300" />
+                <Star className="w-10 h-10 text-gold-400 mb-4 group-hover:scale-110 transition-transform duration-300" />
                 <h4 className="text-2xl font-black uppercase italic mb-2">Ceramic Coating</h4>
                 <p className="text-neutral-400 text-sm">Brillo extremo y repelencia hidrofóbica.</p>
               </div>
