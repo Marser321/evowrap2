@@ -128,11 +128,11 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
               <h3 className="text-4xl md:text-5xl font-black uppercase italic mb-2">
-                Servicios <span className="text-neon-lime">Elite</span>
+                Servicios <span className="text-gold-500">Elite</span>
               </h3>
               <p className="text-neutral-400">Soluciones de protección y personalización de clase mundial.</p>
             </div>
-            <Link href="/services" className="text-neon-cyan hover:text-white uppercase tracking-widest font-bold text-sm flex items-center gap-2 transition-colors">
+            <Link href="/services" className="text-gold-500 hover:text-white uppercase tracking-widest font-bold text-sm flex items-center gap-2 transition-colors">
               Ver Todos <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
