@@ -12,7 +12,7 @@ const services = [
         description: 'Brillo espejo y protección molecular.',
         image: '/images/services/ceramic-card.png',
         icon: Droplets,
-        color: 'from-cyan-500 to-blue-500'
+        color: 'from-gold-500 to-amber-500'
     },
     {
         id: 'ppf',
@@ -20,7 +20,7 @@ const services = [
         description: 'Blindaje invisible contra impactos.',
         image: '/images/services/ppf-card.png',
         icon: Shield,
-        color: 'from-indigo-500 to-purple-500'
+        color: 'from-amber-600 to-gold-600'
     },
     {
         id: 'detailing',
@@ -53,7 +53,7 @@ export default function ServicesHorizontal() {
                     {/* Intro Title Card */}
                     <div className="w-[85vw] md:w-[30vw] shrink-0 pr-4 md:pr-10">
                         <h2 className="text-4xl md:text-7xl font-black text-white mb-4 leading-tight">
-                            Nuestros <br /><span className="text-indigo-500">Servicios</span>
+                            Nuestros <br /><span className="text-gold-500">Servicios</span>
                         </h2>
                         <p className="text-neutral-400 text-base md:text-lg">
                             Desliza para explorar la gama completa de protección y estética.
@@ -76,8 +76,8 @@ export default function ServicesHorizontal() {
                     </motion.div>
 
                     <motion.div style={{ opacity: opacityText2 }} className="absolute bottom-0 right-0 w-[500px]">
-                        <h3 className="text-8xl font-black text-indigo-900/40 uppercase leading-none">Ceramic</h3>
-                        <p className="text-indigo-800 mt-2 text-xl font-light">Enlace químico permanente.</p>
+                        <h3 className="text-8xl font-black text-gold-950 uppercase leading-none">Ceramic</h3>
+                        <p className="text-gold-900 mt-2 text-xl font-light">Enlace químico permanente.</p>
                     </motion.div>
 
                     <motion.div style={{ opacity: opacityText3 }} className="absolute bottom-0 right-0 w-[500px]">
