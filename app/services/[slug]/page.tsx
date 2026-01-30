@@ -20,7 +20,7 @@ export default function ServiceDetailPage() {
     }
 
     return (
-        <main className="min-h-screen bg-neutral-950 text-white selection:bg-neon-lime selection:text-black">
+        <main className="min-h-screen bg-neutral-950 text-white selection:bg-gold-500 selection:text-black">
             {/* Navigation */}
             <nav className="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent pointer-events-none">
                 <Link
@@ -52,7 +52,7 @@ export default function ServiceDetailPage() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="inline-block mb-4 px-4 py-1.5 rounded-full bg-neon-cyan/10 border border-neon-cyan/30 text-neon-cyan text-xs font-bold uppercase tracking-widest backdrop-blur-md"
+                        className="inline-block mb-4 px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-500 text-xs font-bold uppercase tracking-widest backdrop-blur-md"
                     >
                         Servicio Premium
                     </motion.div>
@@ -93,7 +93,7 @@ export default function ServiceDetailPage() {
 
                             <div className="grid grid-cols-2 gap-4 pt-6">
                                 {service.technicalSpecs.map((spec, idx) => (
-                                    <div key={idx} className="p-4 rounded-xl bg-neutral-900/50 border border-white/10 hover:border-neon-cyan/30 transition-colors backdrop-blur-sm">
+                                    <div key={idx} className="p-4 rounded-xl bg-neutral-900/50 border border-white/10 hover:border-gold-500/30 transition-colors backdrop-blur-sm">
                                         <p className="text-neutral-500 text-xs uppercase tracking-wider mb-1">{spec.label}</p>
                                         <p className="text-white font-bold">{spec.value}</p>
                                     </div>
