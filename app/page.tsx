@@ -2,7 +2,7 @@
 
 import Hero from "@/components/home/Hero";
 import TransformationSection from "@/components/home/TransformationSection";
-import ServicesHorizontal from "@/components/home/ServicesHorizontal";
+import ServicesVertical from "@/components/home/ServicesVertical";
 
 export default function Home() {
   return (
@@ -13,8 +13,8 @@ export default function Home() {
       {/* 2. TRANSFORMATION SECTION (Slider) */}
       <TransformationSection />
 
-      {/* 3. SERVICES HORIZONTAL SCROLL (Restored) */}
-      <ServicesHorizontal />
+      {/* 3. SERVICES VERTICAL STACK (New) */}
+      <ServicesVertical />
     </main>
   );
 }
