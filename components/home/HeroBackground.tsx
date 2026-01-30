@@ -24,7 +24,7 @@ export default function HeroBackground() {
                     style={{
                         transform: "perspective(500px) rotateX(60deg)"
                     }}
-                    className="absolute w-[300%] h-[300%] -top-[100%] -left-[50%] bg-[linear-gradient(to_right,rgba(212,175,55,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(212,175,55,0.1)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-100"
+                    className="absolute w-[300%] h-[300%] -top-[100%] -left-[50%] bg-[linear-gradient(to_right,rgba(99,102,241,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(99,102,241,0.2)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-100"
                 />
             </div>
 
@@ -33,7 +33,7 @@ export default function HeroBackground() {
                 initial={{ opacity: 0.6, scale: 0.8 }}
                 animate={{ opacity: [0.5, 0.8, 0.5], scale: [0.8, 1.1, 0.8] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-600/20 rounded-full blur-[100px] mix-blend-screen"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-600/30 rounded-full blur-[100px] mix-blend-screen"
             />
 
             {/* 3. Secondary Flowing Glows (Automotive Sheen) */}
@@ -44,7 +44,7 @@ export default function HeroBackground() {
                     rotate: [0, 10, 0],
                 }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-[20%] -left-[10%] w-[60vw] h-[60vw] bg-amber-900/10 rounded-full blur-[100px]"
+                className="absolute -top-[20%] -left-[10%] w-[60vw] h-[60vw] bg-blue-900/10 rounded-full blur-[100px]"
             />
 
             <motion.div
@@ -53,7 +53,7 @@ export default function HeroBackground() {
                     y: ['10%', '-10%', '10%'],
                 }}
                 transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-                className="absolute -bottom-[20%] -right-[10%] w-[60vw] h-[60vw] bg-gold-900/10 rounded-full blur-[100px]"
+                className="absolute -bottom-[20%] -right-[10%] w-[60vw] h-[60vw] bg-purple-900/10 rounded-full blur-[100px]"
             />
 
             {/* 4. Speed Particles / Dust */}
